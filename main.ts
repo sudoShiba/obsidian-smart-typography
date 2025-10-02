@@ -586,7 +586,7 @@ class SmartTypographySettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Comparison")
-      .setDesc("<= | >= | /= will be converted to ≤ | ≥ | ≠")
+      .setDesc("<= | >= | != will be converted to ≤ | ≥ | ≠")
       .addToggle((toggle) => {
         toggle
           .setValue(this.plugin.settings.comparisons)

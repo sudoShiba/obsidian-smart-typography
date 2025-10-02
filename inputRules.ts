@@ -153,9 +153,9 @@ export const comparisonRules: InputRule[] = [
   },
   {
     trigger: "=",
-    from: "/=",
+    from: "!=",
     to: "≠",
-    contextMatch: /\/$/,
+    contextMatch: /!$/,
   },
 ];
 

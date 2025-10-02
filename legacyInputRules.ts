@@ -249,7 +249,7 @@ export const lessThanOrEqualTo: LegacyInputRule = {
 
 export const notEqualTo: LegacyInputRule = {
   matchTrigger: "=",
-  matchRegExp: /\/=$/,
+  matchRegExp: /!=$/,
   performUpdate: (instance, delta, settings) => {
     delta.update({ line: delta.from.line, ch: delta.from.ch - 1 }, delta.to, [
       "≠",
@@ -257,7 +257,7 @@ export const notEqualTo: LegacyInputRule = {
   },
   performRevert: (instance, delta, settings) => {
     if (instance.getRange(delta.from, delta.to) === "≠") {
-      delta.update(delta.from, delta.to, ["/="]);
+      delta.update(delta.from, delta.to, ["!="]);
     }
   },
 };
